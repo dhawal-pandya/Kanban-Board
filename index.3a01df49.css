@@ -1,0 +1,268 @@
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap";
+.outro {
+  color: #fff;
+  text-align: center;
+  width: 40%;
+  position: fixed;
+  bottom: 5px;
+  left: 30%;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.modal-high {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+}
+
+.modal {
+  height: 95%;
+  width: 95%;
+  box-sizing: border-box;
+  z-index: 2;
+  opacity: .8;
+  color: #fff;
+  background-color: #000;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+.question {
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: rotate(-40deg);
+}
+
+.modal > h3 {
+  font-size: 1.9rem;
+}
+
+.modal > p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal > h3 {
+    font-size: 2rem;
+  }
+
+  .modal > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal > h3 {
+    font-size: 1.4rem;
+  }
+
+  .modal > p {
+    font-size: .6rem;
+  }
+}
+
+:root {
+  --color-bg: #18182d;
+  --color-bg-variant: #2c2c6c;
+  --color-bg-variant2: #23237a;
+  --color-primary: #5fb8f8;
+  --color-primary-variant: #4db5ff66;
+  --color-dark: #000;
+}
+
+body {
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  font-family: Manrope, sans-serif;
+}
+
+.kanban-title {
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: 4rem;
+  display: flex;
+}
+
+.columns-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin: 5px;
+  display: grid;
+}
+
+@media screen and (max-width: 1200px) {
+  .columns-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    display: grid;
+  }
+
+  .columns-container > * {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columns-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    display: grid;
+  }
+}
+
+.column {
+  background: var(--color-bg-variant2);
+  min-width: 300px;
+  border: 1px solid #0000;
+  border-radius: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  display: flex;
+}
+
+.column:hover {
+  border-color: var(--color-primary-variant);
+  background: var(--color-bg-variant);
+}
+
+.column h2 {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+}
+
+.task-list {
+  flex-flow: column wrap;
+  flex-grow: 1;
+  justify-content: flex-start;
+  padding: 0;
+  display: flex;
+}
+
+.task {
+  min-width: 200px;
+  background-color: var(--color-primary-variant);
+  color: #fff;
+  border: 1px solid var(--color-dark);
+  cursor: grab;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.task:hover {
+  color: #fff;
+  border: 1px solid #0000;
+}
+
+.add-task-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  display: flex;
+}
+
+.add-task-container input[type="text"] {
+  width: 17rem;
+  max-height: 2rem;
+  border-radius: 1rem;
+  flex: 1;
+  padding: 5px;
+}
+
+.add-task-container button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 10px;
+}
+
+.add-task-container button:hover {
+  background-color: #3e8e41;
+}
+
+.delete-task {
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  background-color: #f44336;
+  border: none;
+  border-radius: 2rem;
+  padding: .3rem;
+}
+
+.delete-task:hover {
+  background-color: #d32f2f;
+}
+
+.delete-column {
+  color: #fff;
+  cursor: pointer;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.delete-column:hover {
+  background-color: #d32f2f;
+}
+
+.add-column {
+  background: var(--color-bg-variant);
+  min-width: 300px;
+  border: 1px solid #0000;
+  border-radius: 2rem;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  display: flex;
+}
+
+.add-column-input[type="text"] {
+  width: 17rem;
+  border-radius: 1rem;
+  padding: 5px;
+}
+
+.add-column-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.add-column button:hover {
+  background-color: #3e8e41;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
